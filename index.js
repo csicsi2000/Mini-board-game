@@ -10,7 +10,8 @@ var moveCount = 0;
 Start();
 //start
 function Start(){
-    firstTurn = true;
+    firstTurn = false;
+    turnText();
     cellElements.forEach(cell => {
         cell.classList.remove(firstPlayer);
         cell.classList.remove(secondPlayer);
@@ -69,6 +70,11 @@ function handleClick(e){
 //lépés
 function placeMark(cell, currentTurn, x, y){
     cell.classList.add(currentTurn)
+    turnText();
+    Table[x][y] = currentTurn;
+}
+
+function turnText(){
     if(firstTurn){
         firstTurn = false;
         document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
@@ -76,9 +82,7 @@ function placeMark(cell, currentTurn, x, y){
     else{
         firstTurn = true;
         document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
-
     }
-    Table[x][y] = currentTurn;
 }
 
 function isInRange(x, y){

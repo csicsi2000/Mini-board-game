@@ -43,6 +43,7 @@ h2{
     content: 'X';
     font-family: 'Lato', sans-serif;
     font-size: 45px;
+    transform: translateY(-3px);
 }
 
 .player2::after{
@@ -50,6 +51,7 @@ h2{
     content: 'O';
     font-size: 45px;
     font-family: 'Lato', sans-serif;
+    transform: translateY(-3px);
 }
 
 .winning-screen{

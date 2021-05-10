@@ -235,7 +235,7 @@ function isWinning(currentP, x, y){
         winnerScreen();
         return;
     }
-    console.log(points + " anti fiagonal final");
+    console.log(points + " anti diagonal final");
     points= 0;
 
     //check draw
@@ -250,10 +250,12 @@ function winnerScreen(){
 
     if (winner == "player1"){
         document.getElementById("gyoztesID").innerHTML = document.getElementById("first").value +" a győztes";
-    }
-    if (winner == "player2"){
+    } 
+    else if (winner == "player2"){
         let win = String(document.getElementById("second").value) +" a győztes";
         document.getElementById("gyoztesID").innerHTML =  win;
+    } else{
+        document.getElementById("gyoztesID").innerHTML = "Döntetlen";
     }
     document.getElementById("finalScreen").style.display = "flex";
     points = 0;

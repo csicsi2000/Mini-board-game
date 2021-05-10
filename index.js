@@ -257,7 +257,7 @@ function winnerScreen(){
     } else{
         document.getElementById("gyoztesID").innerHTML = "Döntetlen";
     }
-    document.getElementById("finalScreen").style.display = "flex";
+    document.getElementById("finalScreen").style.display = "flex";  
     points = 0;
 }
 

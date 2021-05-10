@@ -33,6 +33,9 @@
     justify-content: center;
     
 }
+.cell:not(.player1):not(.player2):hover{
+    background-color: rgb(199, 199, 199);
+}
 
 h2{
     text-align: center;

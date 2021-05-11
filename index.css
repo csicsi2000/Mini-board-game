@@ -97,3 +97,29 @@ h1{
     height: 30px;
     width: 80px;
 }
+
+@media screen and (max-width: 600px){
+    .cell{
+        width: 9vw;
+        height: 9vw;
+    }
+
+    .userData{
+        flex-direction: column;
+    }
+
+    .players{
+        width: auto;
+        font-size: 1em;
+        padding-top: 1rem;
+    }
+
+    .player1::after{
+        font-size: 8vw;
+        transform: translateY(-2px);
+    }
+    .player2::after{
+        font-size: 8vw;
+        transform: translateY(-2px);
+    }
+}

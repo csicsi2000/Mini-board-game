@@ -101,6 +101,8 @@ function isWinning(currentP, x, y){
     y = Number(y);
     //console.log(Table[x][y] +" "+ x + " " + y)
     moveCount++;
+
+    //winning condition
     let n = 5;
 
     //check row

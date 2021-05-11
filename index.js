@@ -101,7 +101,7 @@ function isWinning(currentP, x, y){
     y = Number(y);
     //console.log(Table[x][y] +" "+ x + " " + y)
     moveCount++;
-    let n = 4;
+    let n = 5;
 
     //check row
     for(let i = 0; i < n; i++){
@@ -135,7 +135,7 @@ function isWinning(currentP, x, y){
     points--;
     console.log(points)
 
-    if (points >= 4){
+    if (points >= n){
         winner = currentP;
         winnerScreen();
         return;
@@ -170,7 +170,7 @@ function isWinning(currentP, x, y){
         }
     }
     points--;
-    if (points >= 4){
+    if (points >= n){
         winner = currentP;
         winnerScreen();
         return;
@@ -203,7 +203,7 @@ function isWinning(currentP, x, y){
         }
     }
     points--;
-    if (points >= 4){
+    if (points >= n){
         winner = currentP;
         winnerScreen();
         return;
@@ -234,7 +234,8 @@ function isWinning(currentP, x, y){
         }
     }
     points--;
-    if (points >= 4){
+    if (points >= n
+){
         winner = currentP;
         winnerScreen();
         return;

@@ -236,8 +236,7 @@ function isWinning(currentP, x, y){
         }
     }
     points--;
-    if (points >= n
-){
+    if (points >= n){
         winner = currentP;
         winnerScreen();
         return;
@@ -276,30 +275,16 @@ document.getElementById("restart").addEventListener("click",() =>{
 let root = document.documentElement;
 $('#first').on('input', function() {
     root.style.setProperty('--firstP', document.getElementById("first").value);
-    document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
+    if(firstTurn){
+        document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
+    }
     //console.log(document.getElementById("first").value)
 });
 
 $('#second').on('input', function() {
     root.style.setProperty('--secondP', document.getElementById("second").value);
-    document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
+    if(!firstTurn){
+        document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
+    }
 });
 
-//symbole
-/*
-let playerFirst = document.querySelector(".player1::after")
-
-$('#firstSym').on('input', function() {
-    document.getElementById("firstSym").value = (document.getElementById("firstSym").value).substr(1,1);
-    $('.player').attr('player1Symbol', document.getElementById("firstSym").value)
-});
-
-let playerSecond = document.querySelector(".player2::after")
-
-$('#secondSym').on('input', function() {
-
-    document.getElementById("secondSym").value =(document.getElementById("secondSym").value).substr(1,1);
-    playerSecond.style.setProperty('content', document.getElementById("secondSym").value);
-});
-
-*/

@@ -1,4 +1,4 @@
-const cellElements = document.querySelectorAll('[data-cell]');
+const cellElements = document.querySelectorAll('.cell');
 let firstTurn;
 const firstPlayer = 'player1';
 const secondPlayer = 'player2';
@@ -276,11 +276,13 @@ document.getElementById("restart").addEventListener("click",() =>{
 let root = document.documentElement;
 $('#first').on('input', function() {
     root.style.setProperty('--firstP', document.getElementById("first").value);
-    console.log(document.getElementById("first").value)
+    document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
+    //console.log(document.getElementById("first").value)
 });
 
 $('#second').on('input', function() {
     root.style.setProperty('--secondP', document.getElementById("second").value);
+    document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
 });
 
 //symbole

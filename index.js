@@ -77,11 +77,11 @@ function placeMark(cell, currentTurn, x, y){
 function turnText(){
     if(firstTurn){
         firstTurn = false;
-        document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
+        document.getElementById("textTurn").innerHTML = document.getElementById("second").value + "'s turn.";
     }
     else{
         firstTurn = true;
-        document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
+        document.getElementById("textTurn").innerHTML = document.getElementById("first").value + "'s turn.";
     }
 }
 
@@ -276,7 +276,7 @@ let root = document.documentElement;
 $('#first').on('input', function() {
     root.style.setProperty('--firstP', document.getElementById("first").value);
     if(firstTurn){
-        document.getElementById("textTurn").innerHTML = document.getElementById("first").value + " a következő.";
+        document.getElementById("textTurn").innerHTML = document.getElementById("first").value + "'s turn.";
     }
     //console.log(document.getElementById("first").value)
 });
@@ -284,7 +284,7 @@ $('#first').on('input', function() {
 $('#second').on('input', function() {
     root.style.setProperty('--secondP', document.getElementById("second").value);
     if(!firstTurn){
-        document.getElementById("textTurn").innerHTML = document.getElementById("second").value + " a következő.";
+        document.getElementById("textTurn").innerHTML = document.getElementById("second").value + "'s turn.";
     }
 });
 

@@ -67,7 +67,7 @@ function handleClick(e){
     isWinning(currentTurn, CellRow, CellColumn);
 }
 
-//lépés
+//move
 function placeMark(cell, currentTurn, x, y){
     cell.classList.add(currentTurn)
     turnText();
@@ -94,7 +94,7 @@ function isInRange(x, y){
     } 
 }
 
-//győztes-e 
+//is winner 
 var points = 0;
 function isWinning(currentP, x, y){
     x = Number(x);

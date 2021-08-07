@@ -255,13 +255,13 @@ function winnerScreen(){
     console.log(winner)
 
     if (winner == "player1"){
-        document.getElementById("gyoztesID").innerHTML = document.getElementById("first").value +" a győztes";
+        document.getElementById("gyoztesID").innerHTML = document.getElementById("first").value +" is the winner";
     } 
     else if (winner == "player2"){
-        let win = String(document.getElementById("second").value) +" a győztes";
+        let win = String(document.getElementById("second").value) +" is the winner";
         document.getElementById("gyoztesID").innerHTML =  win;
     } else{
-        document.getElementById("gyoztesID").innerHTML = "Döntetlen";
+        document.getElementById("gyoztesID").innerHTML = "Draw";
     }
     document.getElementById("finalScreen").style.display = "flex";  
     points = 0;

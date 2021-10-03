@@ -246,7 +246,7 @@ function isWinning(currentP, x, y){
 
     //check draw
     if(moveCount == 100){
-        winner = "Döntetlen";
+        winner = "Draw";
         winnerScreen();
     }
 }
